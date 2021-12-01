@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main_fragment"
+    android:background="#FFFFFF">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/lin_0"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="22dp"
+            android:layout_marginLeft="143dp"
+            android:layout_marginTop="56dp"
+            android:text="pieroborgo"
+
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_menu"
+            android:layout_marginLeft="130dp"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_userpic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="14dp"
+        android:src="@drawable/ic_userpic" />
+
+    <TextView
+        android:id="@+id/txt_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_userpic"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="13dp"
+        android:text="Piero Borgo"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_name2"
+        android:layout_marginHorizontal="15dp"
+        android:textColor="@color/black"
+        android:text="Product designer, founder of Leevia, Lego bricks lover."
+        android:textSize="14sp"
+
+        />
+    <TextView
+        android:id="@+id/txt_url"
+        android:layout_below="@id/txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="leevia.com"
+        android:textColor="@color/blue"
+        android:layout_marginHorizontal="15dp"
+        />
+    <LinearLayout
+        android:id="@+id/lin_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_0"
+        android:layout_marginLeft="143dp"
+
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="53dp"
+            android:text="210"
+            android:textColor="@color/black"
+            android:textSize="16.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="53dp"
+            android:text="600"
+            android:textColor="@color/black"
+
+            android:textSize="16.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500"
+            android:textColor="@color/black"
+
+            android:textSize="16.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/lin_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin_2"
+        android:layout_marginLeft="142dp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="post"
+            android:textColor="@color/black"
+
+            android:layout_marginRight="42dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="follower"
+            android:textColor="@color/black"
+
+            android:layout_marginRight="42dp"/>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textColor="@color/black"
+
+            android:text="following"
+           />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_url"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Follow"
+            android:backgroundTint="@color/bluebutton"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Message"
+            android:layout_marginLeft="8dp"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+
+            />
+        <ImageButton
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more"
+
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_3"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_actual" />
+
+    <LinearLayout
+        android:id="@+id/lin_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_container"
+        android:layout_marginHorizontal="21dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/ic_grid" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/ic_tags" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_igtv" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_4"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_posts" />
+</RelativeLayout>
